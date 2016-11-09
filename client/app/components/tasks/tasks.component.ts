@@ -38,7 +38,7 @@ export class TasksComponent {
         var tasks = this.tasks;
         this.taskService.deleteTask(id).subscribe(data => {
             if(data.n == 1){
-                for(var i = 1; i < tasks.length; i++){
+                for(var i = 0; i < tasks.length; i++){
                     if(tasks[i]._id == id){
                         tasks.splice(i, 1);
                     }
