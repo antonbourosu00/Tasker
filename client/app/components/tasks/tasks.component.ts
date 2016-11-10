@@ -51,7 +51,7 @@ export class TasksComponent {
         var _task = {
             _id: task._id,
             title: task.title,
-            isDone: !task.idDone
+            isDone: !task.isDone
         };
 
         this.taskService.updateStatus(_task).subscribe(data => {
