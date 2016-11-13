@@ -24,13 +24,15 @@ export class TasksComponent {
         event.preventDefault;
         var newTask = {
             "title": this.title,
-            "isDone": false
+            "isDone": false,
+            "description": this.description
         }
 
         this.taskService.addTask(newTask)
             .subscribe(task => {
                 this.tasks.push(task);
                 this.title = '';
+                this.description = '';
             })
     }
 
@@ -51,6 +53,7 @@ export class TasksComponent {
         var _task = {
             _id: task._id,
             title: task.title,
+            description: task.description,
             isDone: !task.isDone
         };
 
