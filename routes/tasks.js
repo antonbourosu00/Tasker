@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongojs = require('mongojs');
-var db = mongojs('', ['tasks']);
+var db = mongojs('mongodb://dred:qwerty@ds033107.mlab.com:33107/taskapp_dred', ['tasks']);
 
 
 

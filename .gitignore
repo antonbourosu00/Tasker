@@ -1,6 +1,7 @@
 node_modules
 client/bower_components
-*.log
-*.xml
-*.iml
-*.js.map!
+**/*.log
+**/*.xml
+**/*.iml
+**/*.js.map!
+**/*.js

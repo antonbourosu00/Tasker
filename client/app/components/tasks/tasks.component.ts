@@ -12,6 +12,7 @@ import { Task } from '../../../Task';
 export class TasksComponent {
     tasks: Task[];
     title: string;
+    description: string;
 
     constructor(private taskService:TaskService){
         this.taskService.getTasks()

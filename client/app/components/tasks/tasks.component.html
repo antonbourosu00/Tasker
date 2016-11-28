@@ -10,7 +10,7 @@
 </form>
 
 <div class="task-list">
-    <div *ngFor="let task of tasks">
+    <div *ngFor="let task of tasks" class="clearfix">
         <div class="col-md-1">
             <input type="checkbox" [checked]="task.isDone" (click)="updateStatus(task)">
         </div>
