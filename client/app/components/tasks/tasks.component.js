@@ -24,12 +24,14 @@ var TasksComponent = (function () {
         event.preventDefault;
         var newTask = {
             "title": this.title,
-            "isDone": false
+            "isDone": false,
+            "description": this.description
         };
         this.taskService.addTask(newTask)
             .subscribe(function (task) {
             _this.tasks.push(task);
             _this.title = '';
+            _this.description = '';
         });
     };
     TasksComponent.prototype.deleteTask = function (id) {
@@ -48,6 +50,7 @@ var TasksComponent = (function () {
         var _task = {
             _id: task._id,
             title: task.title,
+            description: task.description,
             isDone: !task.isDone
         };
         this.taskService.updateStatus(_task).subscribe(function (data) {
